@@ -28,24 +28,24 @@ Este programa consiste en una API para conseguir una ciudad más accesible, dond
 
 - Entries
 
- - id
- - title
- - city
- - neightborhood
- - district
- - description
- - userId
- - status
- - createdAt
- - modifiedAt
+  - id
+  - title
+  - city
+  - neightborhood
+  - district
+  - description
+  - userId
+  - status
+  - createdAt
+  - modifiedAt
 
 - EntryPhotos
 
- - id
- - name 
- - entryId
- - createdAt
- - modifiedAt
+  - id
+  - name 
+  - entryId
+  - createdAt
+  - modifiedAt
 
 - Likes: (opcional)
 
