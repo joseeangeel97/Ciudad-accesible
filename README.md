@@ -14,6 +14,8 @@ Este programa consiste en una API para conseguir una ciudad más accesible, dond
 
 - Ejecutar `npm run dev` o `npm start` para lanzar el servidor.
 
+- SÚPER IMPORTANTE! ENVIAR LA COLECCIÓN DE POSTMAN JUNTO AL PROYECTO Y MIENTRAS CREAMOS LOS EMPOINTS IR GUARDANDO!!!!
+
 ## Base de datos
 
 - User:
