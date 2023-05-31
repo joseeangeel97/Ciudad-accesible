@@ -57,18 +57,18 @@ Este programa consiste en una API para conseguir una ciudad más accesible, dond
 
 ### Endpoints Usuarios:
 
-- POST [/users] - Registro de usuario. ✅
-- POST [/users/login] - Login de usuario (devuelve token). ✅
-- GET [/users] - Devuelve información del usuario del token. **TOKEN** ✅
-- PUT [/users] - Editar el email o el nombre de usuario. **TOKEN** ✅ (opcional)
+- POST [/users] - Registro de usuario.
+- POST [/users/login] - Login de usuario (devuelve token). 
+- GET [/users] - Devuelve información del usuario del token. **TOKEN** 
+- PUT [/users] - Editar el email o el nombre de usuario. **TOKEN** (opcional)
 
 ### Endpoints Entries
 
--POST [/entries] - Crea una entrada (solo admin TIENE token)
--GET [/entries] - Retorna el listado de entradas (opcional añadir algún tipo de filtros)
--GET [/entries/:entryId] - Retorna una entrada en concreto
--POST [/entries/:entryId/likes] - Likea una entrada (token)
--DELETE [/entries/:entryId/likes] -Deslikea una entrada (token)
--POST [entries/:entryId/photos] - Agregar una foto a una entrada (token) (opcional)
--DELETE [/entries/:entryId/photos] -Borra una foto de una entrada (token)
--PUT [/entries/:entryId/resolves] - Marca un problema de accesibilidad como resuelto
+- POST [/entries] - Crea una entrada (solo admin TIENE **TOKEN**)
+- GET [/entries] - Retorna el listado de entradas (opcional añadir algún tipo de filtros)
+- GET [/entries/:entryId] - Retorna una entrada en concreto
+- POST [/entries/:entryId/likes] - Likea una entrada **TOKEN**
+- DELETE [/entries/:entryId/likes] -Deslikea una entrada **TOKEN**
+- POST [entries/:entryId/photos] - Agregar una foto a una entrada **TOKEN** (opcional)
+- DELETE [/entries/:entryId/photos] -Borra una foto de una entrada **TOKEN**
+- PUT [/entries/:entryId/resolves] - Marca un problema de accesibilidad como resuelto
