@@ -62,7 +62,6 @@ Este programa consiste en una API para conseguir una ciudad más accesible, dond
 - POST [/users] - Registro de usuario.
 - POST [/users/login] - Login de usuario (devuelve token). 
 - GET [/users] - Devuelve información del usuario del token. **TOKEN** 
-- PUT [/users] - Editar el email o el nombre de usuario. **TOKEN** (opcional)
 
 ### Endpoints Entries
 
