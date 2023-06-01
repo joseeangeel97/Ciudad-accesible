@@ -25,8 +25,8 @@ const main = async () => {
                 email VARCHAR(100) UNIQUE NOT NULL,
                 password VARCHAR(100) NOT NULL,
                 role ENUM('admin', 'normal') DEFAULT 'normal',
-                created_At DATETIME NOT NULL,
-                modified_At DATETIME
+                createdAt DATETIME NOT NULL,
+                modifiedAt DATETIME
             )
         `);
 
@@ -39,8 +39,8 @@ const main = async () => {
                 description TEXT NOT NULL,
                 userId INT UNSIGNED NOT NULL,
                 status BOOLEAN,
-                created_At DATETIME NOT NULL,
-                modified_At DATETIME,
+                createdAt DATETIME NOT NULL,
+                modifiedAt DATETIME,
                 FOREIGN KEY (userId) REFERENCES users(id)
             )
         `);
@@ -59,10 +59,10 @@ const main = async () => {
     await connection.query(`
             CREATE TABLE IF NOT EXISTS entryVotes (
                 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-                user_Id INT UNSIGNED NOT NULL,
-                entry_Id INT UNSIGNED NOT NULL,
-                created_At DATETIME NOT NULL,
-                modified_At DATETIME,
+                userId INT UNSIGNED NOT NULL,
+                entryId INT UNSIGNED NOT NULL,
+                createdAt DATETIME NOT NULL,
+                modifiedAt DATETIME,
                 FOREIGN KEY (userId) REFERENCES users(id),
                 FOREIGN KEY (entryId) REFERENCES entries(id)
             )
