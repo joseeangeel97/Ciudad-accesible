@@ -29,7 +29,15 @@ const {
   addEntryPhoto,
   deleteEntryPhoto,
   markResolved,
+  newUser,
 } = require('./controllers/entries');
+
+//Registro de usuario
+
+app.post('/users', newUser);
+
+// Login de usuario.
+app.post('/users/login', loginUser);
 
 //Agregar una foto a una entrada
 
@@ -69,5 +77,5 @@ app.use((req, res) => {
 
 //Middleware escucha peticiones al puerto 8000
 app.listen(process.env.PORT, () => {
-  console.log(`Server listening at http://localhost:${process.env.PORT}`)
+  console.log(`Server listening at http://localhost:${process.env.PORT}`);
 });
