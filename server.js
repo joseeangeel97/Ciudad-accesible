@@ -13,6 +13,9 @@ const chalk = require('chalk');
 //Creamos el servidor.
 const app = express();
 
+//Middleware que deserializa un body en formato raw creando la propiedad body en el objeto request.
+app.use(express.json());
+
 //Middleware de petición entrante (morgan)
 app.use(morgan('dev'));
 
