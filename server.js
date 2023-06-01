@@ -4,6 +4,12 @@ require('dotenv').config();
 //Express
 const express = require('express');
 
+//Evita problemas con el cliente
+
+const cors = require ("cors");
+
+app.use(cors());
+
 //Morgan
 const morgan = require('morgan');
 
