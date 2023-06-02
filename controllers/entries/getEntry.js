@@ -1,4 +1,4 @@
-ectEntryByIdQuery = require('../../db/queries/entries/selectEntryByIdQuery');
+const selectEntryByIdQuery = require('../../db/queries/entries/selectEntryByIdQuery');
 
 const getEntry = async (req, res, next) => {
   try {
