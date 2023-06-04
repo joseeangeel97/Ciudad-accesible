@@ -1,7 +1,7 @@
 const getDB = require('../../getDB');
 
 //Función para marcar problema de accesibilidad
-const markAccessibilityResolvedQuery = async (entryId) => {
+const markAccesibilityResolvedQuery = async (entryId) => {
   const db = await getDB();
   try {
     //Actualizamos tabla, columna acc_resolved como true en la fila donde id coincide con entryId
@@ -18,4 +18,4 @@ const markAccessibilityResolvedQuery = async (entryId) => {
   }
 };
 
-module.exports = markAccessibilityResolvedQuery;
+module.exports = markAccesibilityResolvedQuery;

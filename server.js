@@ -84,7 +84,10 @@ app.delete('/entries/:entryId/photos', authUser, userExists, deleteEntryPhoto);
 
 //Marcar problema de accesibilidad como resuelto
 
-app.put('/entries/:entryId/photos', authUser, userExists, markResolved);
+app.put('/entries/:entryId/resolved', authUser, userExists, markResolved);
+
+//Obtener información del perfil de un usuario.
+app.get('/users/:userId', getUser);
 
 /**
  * ##############################

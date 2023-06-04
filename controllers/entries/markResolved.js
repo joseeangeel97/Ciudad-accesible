@@ -1,9 +1,9 @@
+const { generateError } = require('../../helpers');
+
 //Importamos para marcar problema accesibilidad
-const markAccessibilityResolvedQuery = require('../../db/queries/entries/markAccessibilityResolvedQuery');
+const markAccesibilityResolvedQuery = require('../../db/queries/entries/markAccesibilityResolvedQuery');
 //Importamos para obtener entrada concreta por su id
 const selectEntryByIdQuery = require('../../db/queries/entries/selectEntryByIdQuery');
-
-const { generateError } = require('../../helpers');
 
 //
 const markResolved = async (req, res, next) => {
@@ -20,7 +20,7 @@ const markResolved = async (req, res, next) => {
     }
 
     //Marcamos problema acce como resuelto en la entrada concreta
-    await markAccessibilityResolvedQuery(entryId);
+    await markAccesibilityResolvedQuery(entryId);
 
     res.send({
       status: 'ok',

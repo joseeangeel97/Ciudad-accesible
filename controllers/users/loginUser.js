@@ -48,3 +48,4 @@ const loginUser = async (req, res, next) => {
     next(err);
   }
 };
+module.exports = loginUser;
