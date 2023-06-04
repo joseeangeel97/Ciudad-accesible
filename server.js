@@ -26,6 +26,16 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 /**
+ * ################################
+ * ## Middlewares personalizados ##
+ * ################################
+ */
+
+const authUser = require('./middlewares/authUser');
+const authUserOptional = require('./middlewares/authUserOptional');
+const userExists = require('./middlewares/userExists');
+
+/**
  * ##########################
  * ## Middlewares usuarios ##
  * ##########################
