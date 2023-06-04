@@ -6,7 +6,7 @@ const express = require('express');
 
 //Evita problemas con el cliente
 
-const cors = require ("cors");
+const cors = require('cors');
 
 app.use(cors());
 
@@ -26,15 +26,23 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 /**
+ * ##########################
+ * ## Middlewares usuarios ##
+ * ##########################
+ */
+
+const { newUser, loginUser, getUser } = require('./controllers/users');
+
+/**
  * ##############################
  * ##    Endpoints entradas   ##
  * ############################
  */
 
 const {
-  getEntry, 
-  newLike, 
-  deleteLike
+  getEntry,
+  newLike,
+  deleteLike,
   addEntryPhoto,
   deleteEntryPhoto,
   markResolved,
