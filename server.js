@@ -32,6 +32,9 @@ app.use(morgan('dev'));
  */
 
 const {
+  getEntry, 
+  newLike, 
+  deleteLike
   addEntryPhoto,
   deleteEntryPhoto,
   markResolved,
@@ -44,6 +47,15 @@ app.post('/users', newUser);
 
 // Login de usuario.
 app.post('/users/login', loginUser);
+
+//Obtenemos entrada por ID
+app.get('/entries/:entryId', authUserOptional, getEntry);
+
+//Dar like a una entrada
+app.post('/entries/:entryId/likes', authUser, userExists, newLike);
+
+//Deslikear una entrada
+app.delete('/entries/:entryId/likes', authUser, userExists, deleteLike);
 
 //Agregar una foto a una entrada
 
