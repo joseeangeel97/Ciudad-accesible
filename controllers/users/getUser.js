@@ -1,4 +1,4 @@
-const selectUserByIdQuery = require('../../db/queries/selectUserByIdQuery');
+const selectUserByIdQuery = require('../../db/queries/users/selectUserByIdQuery');
 
 const getUser = async (req, res, next) => {
   try {

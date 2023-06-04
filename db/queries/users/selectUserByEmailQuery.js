@@ -1,6 +1,6 @@
-const getDB = require('../getDB');
+const getDB = require('../../getDB');
 
-const { generateError } = require('../../helpers');
+const { generateError } = require('../../../helpers');
 
 const selectUserByEmailQuery = async (email) => {
   let connection;

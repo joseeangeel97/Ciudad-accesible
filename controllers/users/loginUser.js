@@ -1,4 +1,4 @@
-const selectUserByEmailQuery = require('../../db/queries/selectUserByEmailQuery');
+const selectUserByEmailQuery = require('../../db/queries/users/selectUserByEmailQuery');
 
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');

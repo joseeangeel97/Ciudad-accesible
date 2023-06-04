@@ -4,6 +4,9 @@ require('dotenv').config();
 //Express
 const express = require('express');
 
+//Creamos el servidor.
+const app = express();
+
 //Evita problemas con el cliente
 
 const cors = require('cors');
@@ -15,9 +18,6 @@ const morgan = require('morgan');
 
 //Chalk para la terminal
 const chalk = require('chalk');
-
-//Creamos el servidor.
-const app = express();
 
 //Middleware que deserializa un body en formato raw creando la propiedad body en el objeto request.
 app.use(express.json());
@@ -56,7 +56,6 @@ const {
   addEntryPhoto,
   deleteEntryPhoto,
   markResolved,
-  newUser,
 } = require('./controllers/entries');
 
 //Registro de usuario

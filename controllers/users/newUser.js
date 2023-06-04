@@ -1,4 +1,4 @@
-const insertUserQuery = require('../../db/queries/inserUserQuery');
+const insertUserQuery = require('../../db/queries/users/insertUserQuery');
 
 const { generateError } = require('../../helpers');
 

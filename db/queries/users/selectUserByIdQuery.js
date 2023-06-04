@@ -1,4 +1,4 @@
-const getDB = require('../getDB');
+const getDB = require('../../getDB');
 
 const selectUserByIdQuery = async (userId) => {
   let connection;
