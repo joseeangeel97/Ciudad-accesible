@@ -1,8 +1,10 @@
 const getDB = require('../../getDB');
 
+//Función para marcar problema de accesibilidad
 const markAccessibilityResolvedQuery = async (entryId) => {
   const db = await getDB();
   try {
+    //Actualizamos tabla, columna acc_resolved como true en la fila donde id coincide con entryId
     await db.query(
       'UPDATE entries SET accessibility_resolved = true WHERE id = ?',
       [entryId]

@@ -1,6 +1,9 @@
 const getDB = require('../../getDB');
 
+//Insertamos una nueva foto en la base de datos
+
 const insertPhotoQuery = async (photoName, entryId) => {
+  //Almacenamos conexion db
   let connection;
 
   try {
@@ -12,7 +15,7 @@ const insertPhotoQuery = async (photoName, entryId) => {
       `INSERT INTO entryPhotos(name, entryId, createdAt) VALUES(?, ?, ?)`,
       [photoName, entryId, createdAt]
     );
-
+    //Objeto con id de la foto y nombre
     return {
       id: photo.insertId,
       name: photoName,
