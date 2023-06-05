@@ -7,7 +7,7 @@ const getUser = async (req, res, next) => {
         const { userId } = req.params;
 
         // Obtenemos el usuario.
-        const user = await selectUserByIdQuery(userId);
+        const user = await selectUserByIdQuery(req.userId);
 
         // Dado que dentro de la función anterior no estamos lanzando un error en caso de que el usuario
         // no exista (lo hacemos con userExists pero aquí no viene al caso) lanzamos un error a continuación.
