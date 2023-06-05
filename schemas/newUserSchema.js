@@ -15,7 +15,7 @@ const newUserSchema = joi.object().keys({
     .string()
     .min(8)
     .max(100)
-    .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
+    .regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/m)
     .error((errors) => {
       switch (errors[0].code) {
         case 'string.pattern.base':
@@ -28,13 +28,4 @@ const newUserSchema = joi.object().keys({
     }),
 });
 
-const validateSchema = async (schema, data) => {
-  try {
-    await schema.validateAsync(data);
-  } catch (err) {
-    err.httpStatus = 400;
-    throw err;
-  }
-};
-
-await validateSchema(newUserSchema, req.body);
+module.export = newUserSchema;

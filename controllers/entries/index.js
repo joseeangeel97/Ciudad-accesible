@@ -4,7 +4,7 @@ const deleteLike = require('./deleteLike');
 const addEntryPhoto = require('./addEntryPhoto');
 const deleteEntryPhoto = require('./deleteEntryPhoto');
 const markResolved = require('./markResolved');
-
+const newEntry = require('./newEntry');
 module.exports = {
   getEntry,
   newLike,
@@ -12,4 +12,5 @@ module.exports = {
   addEntryPhoto,
   deleteEntryPhoto,
   markResolved,
+  newEntry,
 };

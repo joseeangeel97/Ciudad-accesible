@@ -36,6 +36,7 @@ const main = async () => {
                 title VARCHAR(30) NOT NULL,
                 city VARCHAR(60) NOT NULL,
                 district VARCHAR(30) NOT NULL,
+                neightborhood VARCHAR(60) NOT NULL,
                 description TEXT NOT NULL,
                 userId INT UNSIGNED NOT NULL,
                 status BOOLEAN,

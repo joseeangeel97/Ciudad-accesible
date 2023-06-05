@@ -3,6 +3,7 @@ require('dotenv').config();
 
 //Express
 const express = require('express');
+const fileUpload = require('express-fileupload');
 
 //Creamos el servidor.
 const app = express();
@@ -22,6 +23,7 @@ const chalk = require('chalk');
 //Middleware que deserializa un body en formato raw creando la propiedad body en el objeto request.
 app.use(express.json());
 
+app.use(fileUpload());
 //Middleware de petición entrante (morgan)
 app.use(morgan('dev'));
 
@@ -56,6 +58,7 @@ const {
   addEntryPhoto,
   deleteEntryPhoto,
   markResolved,
+  newEntry,
 } = require('./controllers/entries');
 
 //Registro de usuario
@@ -64,6 +67,9 @@ app.post('/users', newUser);
 
 // Login de usuario.
 app.post('/users/login', loginUser);
+
+//Nueva entrada
+app.post('/entries', authUser, userExists, newEntry);
 
 //Obtenemos entrada por ID
 app.get('/entries/:entryId', authUserOptional, getEntry);

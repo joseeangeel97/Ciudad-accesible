@@ -4,26 +4,25 @@ const { generateError } = require('../../helpers');
 
 const newEntry = async (req, res, next) => {
   try {
-    const { id, title, city, neightborhood, district } = req.body;
+    const { title, city, neightborhood, district, description } = req.body;
 
-    if (!id || !title || !city || !neightborhood || !district) {
+    if (!title || !city || !neightborhood || !district || !description) {
       generateError('Faltan campos', 400);
     }
 
     const entry = await insertEntryQuery(
-      id,
+      req.user.id,
       title,
       city,
       neightborhood,
-      district
+      district,
+      description
     );
 
     res.send({
       status: 'ok',
       data: {
-        entry: {
-          ...entry,
-        },
+        entry,
       },
     });
   } catch (err) {
