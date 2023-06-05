@@ -5,7 +5,6 @@ const getDB = require('./getDB.js');
 
 const main = async () => {
   let connection;
-  let code = 0;
 
   try {
     connection = await getDB();
