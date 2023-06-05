@@ -6,7 +6,7 @@ const getUser = async (req, res, next) => {
   try {
     const { userId } = req.params;
 
-    const user = await selectUserByIdQuery(userId);
+    const user = await selectUserByIdQuery(req.userId);
 
     if (!user) {
       generateError('Usuario no encontrado', 404);
