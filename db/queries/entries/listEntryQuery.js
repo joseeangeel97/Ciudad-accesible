@@ -5,7 +5,7 @@ const listEntries = async (req, res, next) => {
     const { keyword } = req.query;
 
     // Dado que la propiedad user puede no existir lo indicamos por medio de la interrogación.
-    const entries = await selectAllEntriesQuery(keyword, req.user?.id);
+    const entries = await selectAllEntriesQuery(keyword, req.userId);
 
     res.send({
       status: 'ok',
